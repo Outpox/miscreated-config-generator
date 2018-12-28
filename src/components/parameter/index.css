@@ -1,5 +1,5 @@
 .parameter {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   font-size: 15px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -12,4 +12,8 @@
 .parameter-input-value input {
   width: 100%;
   box-sizing: border-box;
+}
+
+input[disabled] {
+  cursor: not-allowed;
 }

@@ -18,14 +18,16 @@ export function download(content: string) {
 interface serializedInput {
   name: string
   value: string
+  type: string
 }
 
 export function serializeForm(form: HTMLFormElement): serializedInput[] {
-  const inputs = form.querySelectorAll('.parameter input, .parameter select')
+  const inputs = form.querySelectorAll('.parameter input:not([disabled]), .parameter select')
   return Array.from(inputs).map((child: HTMLInputElement) => {
     return {
       name: child.name,
       value: child.value,
+      type: child.type || child.dataset.type!
     }
   })
 }

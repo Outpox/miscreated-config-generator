@@ -3,12 +3,14 @@
     "name": "sv_servername",
     "type": "text",
     "description": "Your server's name as it should appear in the server list.",
-    "options": {}
+    "options": {
+      "required": true
+    }
   },
   {
     "name": "wm_timeScale",
     "type": "number",
-    "description": "How Fast time moves",
+    "description": "How fast time moves. '3': 8h IRL = 24h IG",
     "options": {
       "default": "3"
     }
@@ -16,19 +18,36 @@
   {
     "name": "wm_forceTime",
     "type": "number",
-    "description": "Force a current time",
+    "description": "Force (and freeze) a current time. 24h format.",
     "options": {
       "default": "-1",
       "min": -1,
-      "max": 24
+      "max": 23
     }
   },
   {
     "name": "g_pinglimit",
     "type": "number",
-    "description": "Max ping before getting kicked",
+    "description": "Max ping limit before getting kicked. 0 is disabled.",
     "options": {
       "default": "0"
+    }
+  },
+  {
+    "name": "g_pingLimitTimer",
+    "type": "number",
+    "description": "How long (in seconds) the user ping must be above g_pinglimit before getting kicked.",
+    "options": {
+      "default": "15"
+    }
+  },
+  {
+    "name": "g_idleKickTime",
+    "type": "number",
+    "description": "How long a player can idle before being kicked. Does not work, waiting on a bugfix.",
+    "options": {
+      "default": "300",
+      "disabled": true
     }
   },
   {
@@ -36,6 +55,7 @@
     "type": "select",
     "description": "Server enforced camera rules, 0=both, 1=fp only, 2=tp only in vehicle",
     "options": {
+      "outputType": "number",
       "optionList": [
         {
           "value": "0",
@@ -51,6 +71,59 @@
           "name": "3rd person in vehicles only"
         }
       ]
+    }
+  },
+  {
+    "name": "log_Verbosity",
+    "description": "No description yet.",
+    "type": "number",
+    "options": {
+      "disabled": true,
+      "default": "0"
+    }
+  },
+  {
+    "name": "log_WriteToFile",
+    "description": "No description yet.",
+    "type": "text",
+    "options": {
+      "disabled": true
+    }
+  },
+  {
+    "name": "log_WriteToFileVerbosity",
+    "description": "No description yet.",
+    "type": "number",
+    "options": {
+      "disabled": true,
+      "default": "0"
+    }
+  },
+  {
+    "name": "log_IncludeTime",
+    "description": "No description yet.",
+    "type": "number",
+    "options": {
+      "disabled": true,
+      "default": "0"
+    }
+  },
+  {
+    "name": "log_chatlog",
+    "description": "No description yet.",
+    "type": "number",
+    "options": {
+      "disabled": true,
+      "default": "0"
+    }
+  },
+  {
+    "name": "log_damagelog",
+    "description": "No description yet.",
+    "type": "number",
+    "options": {
+      "disabled": true,
+      "default": "0"
     }
   }
 ]

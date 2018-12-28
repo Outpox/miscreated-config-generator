@@ -1,18 +1,23 @@
 import * as React from "react";
 import "./index.css";
 
-import Selector, { Option } from "../selector";
+import Selector, { OptionItem } from "../selector";
 
 interface Props {
   name: string;
   inputType: string;
   description?: string;
-  options: {
-    default?: string;
-    min?: number;
-    max?: number;
-    optionList?: Option[];
-  };
+  options: Options;
+}
+
+export interface Options {
+  default?: string;
+  required?: boolean;
+  disabled?: boolean;
+  outputType?: string;
+  min?: number;
+  max?: number;
+  optionList?: OptionItem[];
 }
 
 export default class Parameter extends React.Component<Props> {
@@ -26,7 +31,7 @@ export default class Parameter extends React.Component<Props> {
 
   getInput() {
     if (this.props.inputType === "select") {
-      return <Selector name={this.props.name} options={this.props.options.optionList!} />;
+      return <Selector name={this.props.name} options={this.props.options} />;
     } else {
       return (
         <input
@@ -35,6 +40,8 @@ export default class Parameter extends React.Component<Props> {
           defaultValue={this.props.options.default}
           max={this.props.options.max}
           min={this.props.options.min}
+          required={this.props.options.required}
+          disabled={this.props.options.disabled}
         />
       );
     }

@@ -1,0 +1,27 @@
+.info-bubble {
+  width: 24px;
+  height: 24px;
+  line-height: 22px;
+  background-color: #bcbcbc;
+  border-radius: 50%;
+  position: absolute;
+  right: 24px;
+  color: black;
+  border: solid white 2px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.skylight-wrapper {
+  color: black;
+}
+
+.skylight-dialog {
+  min-height: 200px !important;
+}
+
+.skylight-wrapper code {
+  border-radius: 5px;
+  border: solid 0px transparent;
+  color: #7289da;
+}
