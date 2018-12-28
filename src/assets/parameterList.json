@@ -1,0 +1,56 @@
+[
+  {
+    "name": "sv_servername",
+    "type": "text",
+    "description": "Your server's name as it should appear in the server list.",
+    "options": {}
+  },
+  {
+    "name": "wm_timeScale",
+    "type": "number",
+    "description": "How Fast time moves",
+    "options": {
+      "default": "3"
+    }
+  },
+  {
+    "name": "wm_forceTime",
+    "type": "number",
+    "description": "Force a current time",
+    "options": {
+      "default": "-1",
+      "min": -1,
+      "max": 24
+    }
+  },
+  {
+    "name": "g_pinglimit",
+    "type": "number",
+    "description": "Max ping before getting kicked",
+    "options": {
+      "default": "0"
+    }
+  },
+  {
+    "name": "g_gameRules_Camera",
+    "type": "select",
+    "description": "Server enforced camera rules, 0=both, 1=fp only, 2=tp only in vehicle",
+    "options": {
+      "optionList": [
+        {
+          "value": "0",
+          "name": "1st and 3rd person",
+          "default": true
+        },
+        {
+          "value": "1",
+          "name": "1st person only"
+        },
+        {
+          "value": "2",
+          "name": "3rd person in vehicles only"
+        }
+      ]
+    }
+  }
+]

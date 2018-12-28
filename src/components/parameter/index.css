@@ -1,0 +1,15 @@
+.parameter {
+  margin-bottom: 5px;
+  font-size: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.parameter-input-value {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.parameter-input-value input {
+  width: 100%;
+  box-sizing: border-box;
+}

@@ -18,8 +18,8 @@
   font-size: 1.5em;
 }
 
-.app-intro {
-  font-size: large;
+.parameter-list {
+  /* font-size: large; */
 }
 
 @keyframes app-logo-spin {
