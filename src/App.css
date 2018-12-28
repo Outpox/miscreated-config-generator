@@ -2,7 +2,7 @@ form {
   margin-bottom: 50px;
 }
 
-input[type="submit"] {
+input[type='submit'] {
   margin-top: 20px;
   height: 35px;
   cursor: pointer;
@@ -29,11 +29,11 @@ input[type="submit"] {
   font-size: 1.5em;
 }
 
-.parameter-list {
-  /* font-size: large; */
-}
-
 @keyframes app-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

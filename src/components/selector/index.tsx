@@ -26,14 +26,20 @@ export default class Selector extends React.Component<Props> {
   getOptionList() {
     return this.props.options.optionList!.map((option, i) => {
       return (
-        <option key={i} value={option.value}>({option.value}) {option.name}</option>
+        <option key={i} value={option.value}>
+          ({option.value}) {option.name}
+        </option>
       )
     })
   }
 
   render() {
     return (
-      <select name={this.props.name} defaultValue={this.getDefaultOption().value} data-type={this.props.options.outputType}>
+      <select
+        name={this.props.name}
+        defaultValue={this.getDefaultOption().value}
+        data-type={this.props.options.outputType}
+      >
         {this.getOptionList()}
       </select>
     )

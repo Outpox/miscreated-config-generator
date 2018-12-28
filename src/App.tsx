@@ -18,7 +18,7 @@ class App extends React.Component {
     return (
       <div className='app'>
         <header className='app-header'>
-          <InfoBubble/>
+          <InfoBubble />
           <img src={logo} className='app-logo' alt='logo' />
           <h1 className='app-title'>Miscreated Config Generator</h1>
           <p>A dedicated server config generator</p>

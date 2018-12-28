@@ -22,12 +22,14 @@ interface serializedInput {
 }
 
 export function serializeForm(form: HTMLFormElement): serializedInput[] {
-  const inputs = form.querySelectorAll('.parameter input:not([disabled]), .parameter select')
+  const inputs = form.querySelectorAll(
+    '.parameter input:not([disabled]), .parameter select'
+  )
   return Array.from(inputs).map((child: HTMLInputElement) => {
     return {
       name: child.name,
       value: child.value,
-      type: child.type || child.dataset.type!
+      type: child.type || child.dataset.type!,
     }
   })
 }

@@ -48,7 +48,8 @@ export default class InfoBubble extends React.Component<Props> {
             .
           </p>
           <p>
-            Keep in mind that I'm doing this on my free time when I'm not playing games.
+            Keep in mind that I'm doing this on my free time when I'm not
+            playing games.
           </p>
           <p>
             Sources are available on{' '}

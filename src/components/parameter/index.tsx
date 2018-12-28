@@ -1,37 +1,37 @@
-import * as React from "react";
-import "./index.css";
+import * as React from 'react'
+import './index.css'
 
-import Selector, { OptionItem } from "../selector";
+import Selector, { OptionItem } from '../selector'
 
 interface Props {
-  name: string;
-  inputType: string;
-  description?: string;
-  options: Options;
+  name: string
+  inputType: string
+  description?: string
+  options: Options
 }
 
 export interface Options {
-  default?: string;
-  required?: boolean;
-  disabled?: boolean;
-  outputType?: string;
-  min?: number;
-  max?: number;
-  optionList?: OptionItem[];
+  default?: string
+  required?: boolean
+  disabled?: boolean
+  outputType?: string
+  min?: number
+  max?: number
+  optionList?: OptionItem[]
 }
 
 export default class Parameter extends React.Component<Props> {
   constructor(props: Props) {
-    super(props);
+    super(props)
   }
 
   static defaultProps = {
-    inputType: "text"
-  };
+    inputType: 'text',
+  }
 
   getInput() {
-    if (this.props.inputType === "select") {
-      return <Selector name={this.props.name} options={this.props.options} />;
+    if (this.props.inputType === 'select') {
+      return <Selector name={this.props.name} options={this.props.options} />
     } else {
       return (
         <input
@@ -43,19 +43,19 @@ export default class Parameter extends React.Component<Props> {
           required={this.props.options.required}
           disabled={this.props.options.disabled}
         />
-      );
+      )
     }
   }
 
   render() {
     return (
-      <div className="parameter">
+      <div className='parameter'>
         <span>{this.props.description}</span>
-        <div className="parameter-input-value">
+        <div className='parameter-input-value'>
           <code>{this.props.name}</code>
           {this.getInput()}
         </div>
       </div>
-    );
+    )
   }
 }
