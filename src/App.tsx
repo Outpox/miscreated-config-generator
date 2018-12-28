@@ -1,5 +1,4 @@
 import * as React from 'react'
-import * as ReactGA from 'react-ga'
 
 import './app.css'
 import logo from './assets/logo.svg'
@@ -10,8 +9,6 @@ import * as paramList from './assets/parameterList.json'
 import { download, serializeForm } from './utils'
 
 console.log(paramList)
-
-ReactGA.initialize('UA-50661645-9')
 
 class App extends React.Component {
   public render() {
